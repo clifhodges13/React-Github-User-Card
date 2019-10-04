@@ -1,5 +1,6 @@
 import React from 'react';
-import UserCard from './components/UserCard'
+import UserCard from './components/UserCard';
+import './index.css';
 
 class App extends React.Component {
   constructor() {
@@ -29,7 +30,7 @@ class App extends React.Component {
 
   render() {
     return(
-      <UserCard 
+      <UserCard
         user={this.state.user}
         followers={this.state.followers}
       />

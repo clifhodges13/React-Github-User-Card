@@ -1,10 +1,25 @@
 import React, { Component } from 'react'
 
 export default class Followers extends Component {
+  constructor() {
+    super()
+    this.state = {
+      isOpen: false
+    }
+  }
+  handleClick = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    })
+  }
+
   render() {
     return (
       <div>
-        {this.props.followers && this.props.followers.map(flwr => {
+        <button onClick={this.handleClick}>
+          {this.state.isOpen === false ? 'Show Followers' : 'Hide Followers'}
+        </button>
+        {this.props.followers && this.state.isOpen === true && this.props.followers.map(flwr => {
           return(
             <div key={flwr.id}>
               <p>{flwr.login}</p>

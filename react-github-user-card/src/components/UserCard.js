@@ -4,7 +4,7 @@ import Followers from './Followers'
 export default class UserCard extends Component {
   render() {
     return (
-      <div>
+      <div className="userCard">
         <img src={this.props.user.avatar_url} alt={this.props.user.name} />
         <h1>{this.props.user.name}</h1>
         <h2>{this.props.user.login}</h2>
