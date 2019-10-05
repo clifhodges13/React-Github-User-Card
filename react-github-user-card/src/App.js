@@ -13,11 +13,8 @@ class App extends React.Component {
     }
   }
 
-  // add a search bar that changes which user displays
-
   componentDidMount() {
     this.getUser('clifhodges13')
-    this.getContributions('clifhodges13')
   }
 
   getUser = (searchInput) => {
@@ -26,7 +23,6 @@ class App extends React.Component {
       .then(res => res.json())
       .then(res => {
         this.setState({ user: res })
-        console.log(this.state.user)
       })
       .catch(err => console.log(err))
     }
@@ -36,14 +32,8 @@ class App extends React.Component {
       .then(res => res.json())
       .then(res => {
         this.setState({ followers: res })
-        console.log(res)
       })
       .catch(err => console.log(err))
-  }
-
-  getContributions = (user) => {
-    fetch(`https://api.github.com/users/${user}/contributions`)
-      .then(res => console.log(res))
   }
 
   render() {
