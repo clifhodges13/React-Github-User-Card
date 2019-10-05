@@ -97,10 +97,6 @@ input {
   transition: all .4s ease;
 }
 
-.followerCard img:hover {
-  transform: scale(.9);
-}
-
 .followerCard:hover {
   transform: scale(1.025);
   box-shadow: 0 1rem 1rem rgba(0,0,0,.5);
