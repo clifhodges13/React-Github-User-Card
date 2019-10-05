@@ -17,6 +17,7 @@ class App extends React.Component {
 
   componentDidMount() {
     this.getUser('clifhodges13')
+    this.getContributions('clifhodges13')
   }
 
   getUser = (searchInput) => {
@@ -38,6 +39,11 @@ class App extends React.Component {
         console.log(res)
       })
       .catch(err => console.log(err))
+  }
+
+  getContributions = (user) => {
+    fetch(`https://api.github.com/users/${user}/contributions`)
+      .then(res => console.log(res))
   }
 
   render() {
