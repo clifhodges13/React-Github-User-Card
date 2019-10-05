@@ -29,6 +29,7 @@ export default class Search extends Component {
         <form onSubmit={this.handleSubmit}>
           <input 
             type="text"
+            placeholder="Search Usernames..."
             value={this.state.input}
             onChange={this.handleChange}
           />

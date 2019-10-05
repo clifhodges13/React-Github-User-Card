@@ -43,7 +43,7 @@ class App extends React.Component {
   render() {
     return(
       <>
-        <h1>Github User: {this.state.user.name}</h1>
+        <h1>Github User: {this.state.user.login}</h1>
         <Search getUser={this.getUser} getFollowers={this.getFollowers} />
         <UserCard
           user={this.state.user}
